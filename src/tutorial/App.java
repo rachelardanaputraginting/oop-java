@@ -1,40 +1,48 @@
 package tutorial;
 
 // memuat class sebagai template
-class Mahasiswa {
+class Polos {
+   String dataString = "polos";
+   int dataInteger = 0;
+}
+
+// class dengan constructor
+class Mahasiswa{
     String nama;
     String nim;
     String jurusan;
-    double ipk;
-    int umur;
+
+    // constructor di panggil saat object pertama kali dibuat
+    // Mahasiswa() {
+    //     System.out.println("ini adalah constructor");
+    // }
+
+    // constructor dengan parameter
+        Mahasiswa(String inputNama, String inputNim, String inputJurusan) {
+            nama = inputNama;
+            nim = inputNim;
+            jurusan = inputJurusan;
+
+            System.out.println(nama);
+            System.out.println(nim);
+            System.out.println(jurusan);
+    }
 }
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Mahasiswa mahasiswa1 = new Mahasiswa();
-        mahasiswa1.nama = "Dinda";
-        mahasiswa1.nim = "2022";
-        mahasiswa1.jurusan = "Informatika";
-        mahasiswa1.ipk = 4.0;
-        mahasiswa1.umur = 19;
 
-        System.out.println(mahasiswa1.nama);
-        System.out.println(mahasiswa1.nim);
-        System.out.println(mahasiswa1.jurusan);
-        System.out.println(mahasiswa1.ipk);
-        System.out.println(mahasiswa1.umur);
+        Mahasiswa mahasiswa1 = new Mahasiswa("rachel","4", "informatika");
+        Mahasiswa mahasiswa2 = new Mahasiswa("didna","4", "informatika");
+        Mahasiswa mahasiswa3 = new Mahasiswa("ginting","4", "informatika");
 
-        Mahasiswa mahasiswa2 = new Mahasiswa();
-        mahasiswa2.nama = "Indriana";
-        mahasiswa2.nim = "2022";
-        mahasiswa2.jurusan = "Informatika";
-        mahasiswa2.ipk = 4.0;
-        mahasiswa2.umur = 19;
 
-        System.out.println(mahasiswa2.nama);
-        System.out.println(mahasiswa2.nim);
-        System.out.println(mahasiswa2.jurusan);
-        System.out.println(mahasiswa2.ipk);
-        System.out.println(mahasiswa2.umur);
+
+        // Polos objecPolos = new Polos();
+        // // objecPolos.dataString = "polos";
+        // // objecPolos.dataInteger = 4;
+
+        // System.out.println(objecPolos.dataString);
+        // System.out.println(objecPolos.dataInteger);
     }
 }
